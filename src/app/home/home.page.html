@@ -1,9 +1,22 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-button (click)="logout()">
+				<ion-icon slot="icon-only" name="log-out"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-title> My Profile </ion-title>
+	</ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-padding">
+	<div class="preview">
+		<ion-avatar (click)="changeImage()">
+			<ng-template #placheolder_avatar>
+				<div class="fallback">
+					<p>Select avatar</p>
+				</div>
+			</ng-template>
+		</ion-avatar>
+	</div>
 </ion-content>
